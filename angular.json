@@ -131,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "restructured-boca"
+  "defaultProject": "restructured-boca",
+  "cli": {
+    "analytics": "8523b913-e43f-4d1e-ab39-b6981d2b568f"
+  }
 }
