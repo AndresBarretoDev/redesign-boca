@@ -1,1 +1,144 @@
-<p>users works!</p>
+<div class="box-users">
+  <div class="box-users-title">
+    <div class="search-users">
+     <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
+       <input type="text" nz-input placeholder="Search Id User" />
+     </nz-input-group>
+     <ng-template #suffixButton>
+       <button nz-button nzType="primary" nzSize="large" nzSearch>Search</button>
+     </ng-template>
+    </div>
+    <h2><strong>Users</strong></h2>
+  </div>
+  <br/>
+  <div class="users-table">
+    <nz-table
+      #virtualTable
+      [nzBordered]="true"
+      [nzVirtualItemSize]="54"
+      [nzData]="listOfData"
+      [nzVirtualForTrackBy]="trackByIndex"
+      [nzFrontPagination]="false"
+      [nzShowPagination]="false"
+      [nzScroll]="{ x: '1200px', y: '240px' }"
+    >
+      <thead>
+        <tr>
+          <th nzLeft>Users</th>
+          <th >Site</th>
+          <th>Username</th>
+          <th>ICPC ID</th>
+          <th>Type</th>
+          <th>IP</th>
+          <th>LastLoging</th>
+          <th>LastLogout</th>
+          <th>Enablet</th>
+          <th>MUlti</th>
+          <th>Fullname</th>
+          <th>Description</th>
+          <th nzRight>Action</th>
+          <th nzRight>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-template nz-virtual-scroll let-data let-index="index">
+          <tr>
+            <td nzLeft>{{ data.name }}</td>
+            <td>{{ data.age }}</td>
+            <td>{{ data.index }}</td>
+            <td>{{ data.address }}</td>
+            <td>{{ data.address }}</td>
+            <td>{{ data.address }}</td>
+            <td>{{ data.address }}</td>
+            <td>{{ data.address }}</td>
+            <td>{{ data.address }}</td>
+            <td>{{ data.address }}</td>
+            <td>{{ data.address }}</td>
+            <td>{{ data.address }}</td>
+            <td nzRight>
+              <a>Edit</a>
+            </td>
+            <td nzRight>
+              <a (click)="showDeleteConfirm()" class="delete-user">Delete</a>
+            </td>
+          </tr>
+        </ng-template>
+      </tbody>
+    </nz-table>
+  </div>
+  <br/>
+  <div class="button-users">
+   <button nz-button nzType="primary" (click)="showModal()">New</button>
+    <nz-modal class="modal" [(nzVisible)]="isVisible" nzTitle="New users" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+      <ng-container nzModalContent>
+       <div class="example-input">
+         <label>User site number:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>User Number:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>Username:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>ICPC ID:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>Type:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>Enabled:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>Multilogins:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>User full Name:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>User Description:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>User Ip:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>Password:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>Retype Password:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>Allow password change:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+        <div class="example-input">
+         <label>Admin(this) password:  </label>
+         <input nz-input placeholder="small size" nzSize="small" />
+        </div>
+      </ng-container>
+    </nz-modal>
+   <button nz-button nzType="primary" (click)="showModaltwo()" nzDanger>Import</button>
+    <nz-modal [(nzVisible)]="isVisibletwo" nzTitle="Import file users" (nzOnCancel)="handleCanceltwo()" (nzOnOk)="handleOktwo()">
+      <ng-container nzModalContent>
+        <div class="import-modal">
+        <h4>The file must be in the format defined in the admin's manual.</h4>
+        <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76" [nzFileList]="fileList">
+         <button nz-button><i nz-icon nzType="upload"></i>Upload file</button>
+        </nz-upload>
+        </div>
+      </ng-container>
+    </nz-modal>
+  </div>
+</div>

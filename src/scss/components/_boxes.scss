@@ -79,3 +79,65 @@
     height: 100%;
   }
   
+  .box-users{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background:#fff;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  }
+
+  .box-users-title{
+    position:relative;
+    height: 35px;
+    padding: 10px;
+    padding-left: 4%;
+    background:#fff;
+    text-align: left;
+  }
+ 
+  .box-users-title h3 {
+    padding-left: 5px;
+    float: left;
+  }
+
+  .search-users{
+    float: right;
+    width: 30%;
+  }
+
+  .delete-user{
+    color: red;
+  }
+ 
+  .users-table{
+    padding: 0;
+    background: #fff;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  [nz-button] {
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+
+  .button-users {
+    float: right;
+  }
+
+  .import-modal{
+    text-align: center;
+  }
+
+  .example-input{
+    text-align:right;
+    padding-right: 20%;
+  }
+
+  .example-input .ant-input {
+    width: 200px;
+    margin: 0 8px 8px 0;
+  }
+
