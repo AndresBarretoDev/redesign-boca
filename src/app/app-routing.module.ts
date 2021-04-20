@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CreateProblemsComponent } from './pages/create-problems/create-problems.component';
 import { HistoricsComponent } from './pages/historics/historics.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ListProblemsComponent } from './pages/list-problems/list-problems.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UsersComponent } from './pages/users/users.component';
 import { ViewLogsComponent } from './pages/view-logs/view-logs.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
       { path: 'home', component:HomeComponent },
       { path: 'users', component:UsersComponent },
       { path: 'problems', component:CreateProblemsComponent },
+      { path: 'list-problems', component:ListProblemsComponent },
       { path: 'logs', component:ViewLogsComponent },
       { path: 'historics', component:HistoricsComponent },
     ]

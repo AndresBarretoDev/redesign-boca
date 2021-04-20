@@ -1,0 +1,46 @@
+<p>list-problems works!</p>
+<nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>Problems</th>
+        <th>Runs</th>
+        <th>Score</th>
+        <th>Clarifications</th>
+        <th>Task</th>
+        <th>Backups</th>
+        <th>Logouts</th>
+        <th>History</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.problems }}</td>
+        <td>{{ data.runs }}</td>
+        <td>{{ data.score }}</td>
+        <td>{{ data.clarifications }}</td>
+        <td>{{ data.task }}</td>
+        <td>{{ data.backups }}</td>
+        <td>{{ data.logouts }}</td>
+        <td>
+          <button nz-button 
+            nzType="primary" 
+            nzSize="default" 
+            nzGhost 
+            (click)="showModal(data)">
+            Abrir historico
+          </button>
+      </tr>
+    </tbody>
+  </nz-table>
+  <nz-modal
+    [(nzVisible)]="isVisible"
+    nzTitle="Information"
+    nzCentered
+    (nzOnCancel)="handleCancel()"
+    (nzOnOk)="handleOk()"
+  >
+    <ng-container >
+      <p>Contenido información usuario</p>
+      <pre>{{dataModal | json}}</pre>
+    </ng-container>
+  </nz-modal>
