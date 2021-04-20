@@ -1,1 +1,25 @@
-<p>view-logs works!</p>
+<nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>Site</th>
+        <th>User #</th>
+        <th>IP</th>
+        <th>Type</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.site }}</td>
+        <td>{{ data.user }}</td>
+        <td>{{ data.ip }}</td>
+        <td>{{ data.type }}</td>
+        <td>{{ data.date }}</td>
+        <td>{{ data.description }}</td>
+        <td>{{ data.status }}</td>
+       
+      </tr>
+    </tbody>
+  </nz-table>
