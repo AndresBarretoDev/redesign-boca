@@ -13,9 +13,6 @@ import { ComponentsModule } from '../components/components.module';
 import { ListProblemsComponent } from './list-problems/list-problems.component';
 
 
-
-
-
 @NgModule({
   declarations: [WelcomeComponent,HomeComponent, LoginComponent, CreateProblemsComponent, ViewLogsComponent, HistoricsComponent, UsersComponent, ListProblemsComponent],
   imports: [
