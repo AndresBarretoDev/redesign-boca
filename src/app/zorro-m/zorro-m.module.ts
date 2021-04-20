@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IconsProviderModule } from './../icons-provider.module';
-
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzCardModule } from 'ng-zorro-antd/card';
@@ -11,7 +10,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzFormModule } from 'ng-zorro-antd/form';
-
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 @NgModule({
   declarations: [],
@@ -26,7 +26,9 @@ import { NzFormModule } from 'ng-zorro-antd/form';
     NzButtonModule,
     NzModalModule,
     NzUploadModule,
-    NzFormModule
+    NzFormModule,
+    NzDividerModule,
+    NzDropDownModule
   ],
   exports:[
     NzLayoutModule,
@@ -38,7 +40,9 @@ import { NzFormModule } from 'ng-zorro-antd/form';
     NzButtonModule,
     NzModalModule,
     NzUploadModule,
-    NzFormModule
+    NzFormModule,
+    NzDividerModule,
+    NzDropDownModule
   ]
 })
 export class ZorroMModule { }

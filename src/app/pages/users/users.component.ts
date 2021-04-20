@@ -23,7 +23,7 @@ export interface VirtualDataInterface {
 
 export class UsersComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
+    
   }
   @ViewChild('virtualTable', { static: false }) nzTableComponent?: NzTableComponent<VirtualDataInterface>;
   private destroy$ = new Subject();
