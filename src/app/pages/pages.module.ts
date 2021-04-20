@@ -10,14 +10,20 @@ import { ZorroMModule } from '../zorro-m/zorro-m.module';
 import { AppRoutingModule } from '../app-routing.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ComponentsModule } from '../components/components.module';
-
-
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzInputModule } from 'ng-zorro-antd/input';
 
 @NgModule({
   declarations: [WelcomeComponent,HomeComponent, LoginComponent, CreateProblemsComponent, ViewLogsComponent, HistoricsComponent, UsersComponent],
   imports: [
     CommonModule,
     ZorroMModule,
+    NzButtonModule,
+    NzModalModule,
+    NzTableModule,
+    NzInputModule,
     AppRoutingModule,
     ComponentsModule
   ]

@@ -1,1 +1,63 @@
-<p>create-problems works!</p>
+<nz-table nzTemplateMode>
+    <thead>
+        <tr>
+            <th>Problem #</th>
+            <th>Short Name</th>
+            <th>Full Name</th>
+            <th>Base Name</th>
+            <th>Desc File</th>
+            <th>Package File</th>
+            <th>Color</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+        </tr>
+        <tr>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+        </tr>
+        <tr>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+            <td>Lorep insum</td>
+        </tr>
+    </tbody>
+</nz-table>
+<br>
+<button nz-button [nzType]="'primary'" (click)="showModal()"><span>Create Problem</span></button>
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Create Problem" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <ng-container>
+        <p>Number</p>
+        <input nz-input placeholder="Basic usage" />
+        
+        <p>Short Name</p>
+        <input nz-input placeholder="Basic usage" />
+        
+        <p>Problem Package</p>
+        <input nz-input placeholder="Basic usage" />
+        
+        <p>Color Name</p>
+        <input nz-input placeholder="Basic usage" />
+        
+        <p>Color RGB</p>
+        <input nz-input placeholder="Basic usage" />
+        
+    </ng-container>
+</nz-modal>
