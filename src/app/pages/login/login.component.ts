@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     });
   }
   submitForm(formData) {
-    const {value} = formData
+    const { value } = formData
     console.log(value);
     if (this.loginForm.invalid) {
       return Object.values(this.loginForm.controls).map(control => {
@@ -30,13 +30,11 @@ export class LoginComponent implements OnInit {
       })
     }
     const userName = 'usuario_boca';
-    const pass = '1234'
-    if (value.userName === userName && value.password === pass) {
-      this.route.navigate(['./welcome/home'])
-    }else{
-      this.isVisible = true
-      this.message = "El usuario y/o contraseña no son correctos"
-    }
+    const pass = '1234';
+
+    (value.userName === userName && value.password === pass) ? this.route.navigate(['./welcome/home']) 
+    :
+    ( this.isVisible = true, this.message = "El usuario y/o contraseña no son correctos")
   }
   handleOk(){
     this.isVisible = false
