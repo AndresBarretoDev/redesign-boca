@@ -11,6 +11,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ComponentsModule } from '../components/components.module';
 import { ListProblemsComponent } from './list-problems/list-problems.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,10 @@ import { ListProblemsComponent } from './list-problems/list-problems.component';
     CommonModule,
     ZorroMModule,
     AppRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ]
 })
 export class PagesModule { }
