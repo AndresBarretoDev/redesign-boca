@@ -1,4 +1,7 @@
 <section class="loginBox">
+  <div class="waveBox">
+    <img src="../../../assets/images/wave.svg" alt="" class="image-cover no-dragg-image">
+  </div>
   <nz-card class="card" nzTitle="Login">
     <form nz-form [formGroup]="loginForm" class="login-form" (ngSubmit)="submitForm(loginForm)">
         <nz-form-item>
@@ -24,7 +27,7 @@
 
 <nz-modal
     [(nzVisible)]="isVisible"
-    nzTitle="Information"
+    nzTitle="Información"
     nzCentered="true"
     (nzOnOk)="handleOk()" 
     nzCancelDisabled="true">
